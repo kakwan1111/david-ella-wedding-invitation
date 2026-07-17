@@ -1,15 +1,19 @@
 /**
  * 霧晨莊園：長卷式歐式水彩喜帖。以信箋留白、非對稱植物框景與古金細線呈現莊重而親密的婚禮儀式感。
+ * 全端版本：整合檔案存儲與使用者認證。
  */
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { CalendarPlus, ChevronDown, MapPin, Navigation } from "lucide-react";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 const ASSETS = {
   hero: "/manus-storage/wedding-hero-rev2_7ea112bc.jpg",
   venue: "/manus-storage/wedding-venue-rev2_271b07cf.jpg",
-  monogram: "/manus-storage/de-monogram-clean_9e658f51.png",
+  monogram: "/manus-storage/names-handwritten-monogram_accc1de9.png",
   divider: "/manus-storage/botanical-divider-rev2_0775b94f.png",
+  flowerLeft: "/manus-storage/flower-bloom-left_c0464393.png",
+  flowerRight: "/manus-storage/flower-bloom-right_fb541c9a.png",
 };
 
 const reveal = {
@@ -32,13 +36,18 @@ function SectionHeading({ eyebrow, children }: { eyebrow: string; children: Reac
 }
 
 export default function Home() {
+  const { user, isAuthenticated } = useAuth();
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const heroY = useTransform(scrollYProgress, [0, 0.28], [0, reduceMotion ? 0 : 18]);
   const [scrolled, setScrolled] = useState(false);
+  const [flowerBloom, setFlowerBloom] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+      setFlowerBloom(window.scrollY > 200);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -81,6 +90,20 @@ export default function Home() {
 
   return (
     <main className="invitation-shell">
+      <div className="flower-bloom-container">
+        <img
+          src={ASSETS.flowerLeft}
+          alt=""
+          className={`flower-bloom-left ${flowerBloom ? "visible" : ""}`}
+          aria-hidden="true"
+        />
+        <img
+          src={ASSETS.flowerRight}
+          alt=""
+          className={`flower-bloom-right ${flowerBloom ? "visible" : ""}`}
+          aria-hidden="true"
+        />
+      </div>
       <header className={`floating-header ${scrolled ? "is-scrolled" : ""}`}>
         <a href="#top" className="brand-mark" aria-label="David and Ella wedding invitation">
           <img src={ASSETS.monogram} alt="David 與 Ella 的 D E 字母花押" />
