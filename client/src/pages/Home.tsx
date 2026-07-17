@@ -8,7 +8,7 @@ import { CalendarPlus, ChevronDown, MapPin, Navigation } from "lucide-react";
 const ASSETS = {
   hero: "/manus-storage/wedding-hero-rev2_7ea112bc.jpg",
   venue: "/manus-storage/wedding-venue-rev2_271b07cf.jpg",
-  monogram: "/manus-storage/de-monogram-clean_9e658f51.png",
+  monogram: "/manus-storage/names-handwritten-monogram_accc1de9.png",
   divider: "/manus-storage/botanical-divider-rev2_0775b94f.png",
 };
 
