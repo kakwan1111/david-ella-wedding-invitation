@@ -12,8 +12,8 @@ const ASSETS = {
   venue: "/manus-storage/wedding-venue-rev2_271b07cf.jpg",
   monogram: "/manus-storage/names-handwritten-monogram_accc1de9.png",
   divider: "/manus-storage/botanical-divider-rev2_0775b94f.png",
-  flowerLeft: "/manus-storage/flower-bloom-left_c0464393.png",
-  flowerRight: "/manus-storage/flower-bloom-right_fb541c9a.png",
+  flowerLeft: "/manus-storage/flower-delicate-left_aeea5184.png",
+  flowerRight: "/manus-storage/flower-delicate-right_12a8563b.png",
 };
 
 const reveal = {
