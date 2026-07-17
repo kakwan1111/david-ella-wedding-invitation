@@ -102,8 +102,6 @@ export default function Home() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
         >
-          <p className="family-line">Together with their families</p>
-          <p className="family-line-zh">在雙方家長及家人的見證下</p>
           <div className="hero-arch">
             <span className="arch-flourish">D · E</span>
             <h1>
@@ -113,8 +111,8 @@ export default function Home() {
             </h1>
           </div>
           <div className="invitation-copy">
-            <p>誠邀您一同見證及慶祝我們的婚禮</p>
             <p lang="en">Cordially invite you to witness and celebrate their wedding</p>
+            <p>誠邀您一同見證及慶祝我們的婚禮</p>
           </div>
         </motion.div>
 
@@ -128,8 +126,8 @@ export default function Home() {
           <div className="date-number" aria-hidden="true">24</div>
           <div className="date-copy">
             <span className="eyebrow">Save the date</span>
-            <h2>2027年1月24日 <small>星期日</small></h2>
-            <p>Sunday, January 24, 2027</p>
+            <h2>Sunday, January 24, 2027</h2>
+            <p>2027年1月24日 星期日</p>
           </div>
           <div className="month-stamp">
             <span>JAN</span>
@@ -139,8 +137,8 @@ export default function Home() {
         </motion.div>
         <motion.button className="text-action" onClick={addToCalendar} type="button" {...motionProps}>
           <CalendarPlus size={17} strokeWidth={1.4} />
-          <span>加入行事曆</span>
-          <small>Add to calendar</small>
+          <span>Add to calendar</span>
+          <small>加入行事曆</small>
         </motion.button>
       </section>
 
@@ -149,23 +147,22 @@ export default function Home() {
       </div>
 
       <section className="schedule-section">
-        <motion.div {...motionProps}>
-          <SectionHeading eyebrow="The celebration">婚禮流程</SectionHeading>
+        <motion.div className="schedule-header" {...motionProps}>
+          <SectionHeading eyebrow="The celebration">Schedule</SectionHeading>
         </motion.div>
-        <div className="timeline">
-          <motion.article className="timeline-item timeline-item-left" {...motionProps}>
-            <div className="time-face"><span>11</span><i /><small>00</small></div>
-            <div className="timeline-copy">
-              <p className="zh">上午十一時正 恭候</p>
-              <p className="en">11:00 AM Reception</p>
+        <div className="schedule-grid">
+          <motion.article className="schedule-card" {...motionProps}>
+            <div className="schedule-time">11:00 AM</div>
+            <div className="schedule-event">
+              <p className="event-title">Reception</p>
+              <p className="event-subtitle">恭候</p>
             </div>
           </motion.article>
-          <div className="timeline-spine" aria-hidden="true"><Diamond /><span /><Diamond /></div>
-          <motion.article className="timeline-item timeline-item-right" {...motionProps}>
-            <div className="time-face"><span>11</span><i /><small>30</small></div>
-            <div className="timeline-copy">
-              <p className="zh">上午十一時三十分 儀式及午宴</p>
-              <p className="en">11:30 AM Ceremony &amp; Luncheon</p>
+          <motion.article className="schedule-card" {...motionProps}>
+            <div className="schedule-time">11:30 AM</div>
+            <div className="schedule-event">
+              <p className="event-title">Ceremony &amp; Luncheon</p>
+              <p className="event-subtitle">儀式及午宴</p>
             </div>
           </motion.article>
         </div>
@@ -178,10 +175,10 @@ export default function Home() {
         </motion.div>
         <motion.div className="venue-copy" {...motionProps}>
           <span className="eyebrow">The venue</span>
-          <h2>香港四季酒店<br />四樓海景禮堂</h2>
-          <p className="venue-en">Harbour View Ballroom, 4/F,<br />Four Seasons Hotel Hong Kong</p>
+          <h2>Harbour View Ballroom<br />Four Seasons Hotel Hong Kong</h2>
+          <p className="venue-zh">香港四季酒店 四樓海景禮堂</p>
           <div className="address-rule" />
-          <p className="address">中環金融街8號<br /><span>8 Finance Street, Central</span></p>
+          <p className="address">8 Finance Street, Central<br /><span>中環金融街8號</span></p>
           <a
             className="map-action"
             href="https://www.google.com/maps/search/?api=1&query=Four+Seasons+Hotel+Hong+Kong+8+Finance+Street+Central"
@@ -189,7 +186,7 @@ export default function Home() {
             rel="noreferrer"
           >
             <span className="map-icon"><MapPin size={19} strokeWidth={1.4} /></span>
-            <span>查看婚宴地點<small>View on Google Maps</small></span>
+            <span>View on Google Maps<small>查看婚宴地點</small></span>
             <Navigation size={16} strokeWidth={1.3} />
           </a>
         </motion.div>

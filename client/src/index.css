@@ -141,7 +141,7 @@
 .eyebrow { display: block; margin-bottom: 18px; font: 500 10px/1 "Jost", sans-serif; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
 .date-copy h2 { margin: 0 0 10px; font-size: clamp(26px, 3.3vw, 43px); font-weight: 500; letter-spacing: .06em; }
 .date-copy h2 small { font-size: .48em; font-weight: 400; color: rgba(49, 55, 47, .65); }
-.date-copy p { margin: 0; font: italic 400 clamp(20px, 2.4vw, 30px)/1.3 "Cormorant Garamond", serif; color: var(--sage); }
+.date-copy p { margin: 0; font-size: clamp(13px, 1.1vw, 16px); letter-spacing: .08em; color: rgba(49, 55, 47, .68); }
 .month-stamp { justify-self: end; width: 88px; height: 124px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; border: 1px solid rgba(183, 154, 98, .54); font: 500 9px/1 "Jost", sans-serif; letter-spacing: .28em; color: var(--sage); }
 .month-stamp i { width: 24px; height: 1px; background: var(--gold); }
 .text-action { margin-top: 56px; display: flex; align-items: center; gap: 11px; padding: 11px 3px; border: 0; border-bottom: 1px solid rgba(70, 82, 71, .45); background: transparent; color: var(--sage-dark); font: 500 13px/1 "Noto Serif TC", serif; transition: color 180ms var(--ease-out), transform 160ms var(--ease-out); }
@@ -158,18 +158,14 @@
 .heading-rule { width: min(270px, 55vw); margin: 27px auto 0; display: flex; align-items: center; gap: 13px; }
 .heading-rule > span, .footer-rule > span { height: 1px; flex: 1; background: rgba(183, 154, 98, .65); }
 .ornament-diamond { display: inline-block; width: 7px; height: 7px; border: 1px solid var(--gold); transform: rotate(45deg); flex: none; }
-.timeline { position: relative; z-index: 1; width: min(100%, 1020px); margin: 80px auto 0; display: grid; grid-template-columns: 1fr 80px 1fr; align-items: center; }
-.timeline-item { display: flex; align-items: center; gap: clamp(20px, 3vw, 42px); }
-.timeline-item-left { justify-content: flex-end; text-align: right; }
-.timeline-item-right { flex-direction: row-reverse; justify-content: flex-end; text-align: left; }
-.time-face { width: 122px; height: 150px; flex: none; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid rgba(246, 240, 229, .26); }
-.time-face span { font: 300 62px/.75 "Cormorant Garamond", serif; }
-.time-face i { width: 28px; height: 1px; margin: 15px 0 11px; background: var(--gold); }
-.time-face small { font: 500 12px/1 "Jost", sans-serif; letter-spacing: .22em; }
-.timeline-copy .zh { margin: 0 0 9px; font-size: clamp(16px, 1.45vw, 19px); letter-spacing: .08em; }
-.timeline-copy .en { margin: 0; font: italic 400 clamp(18px, 1.8vw, 23px)/1.25 "Cormorant Garamond", serif; color: rgba(246, 240, 229, .68); }
-.timeline-spine { align-self: stretch; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 13px 0; }
-.timeline-spine span { width: 1px; flex: 1; margin: 8px 0; background: linear-gradient(to bottom, var(--gold), rgba(183, 154, 98, .18), var(--gold)); }
+.schedule-header { position: relative; z-index: 1; margin-bottom: 80px; }
+.schedule-grid { position: relative; z-index: 1; width: min(100%, 900px); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; }
+.schedule-card { padding: 42px 32px; border: 1px solid rgba(246, 240, 229, .32); background: rgba(246, 240, 229, .08); backdrop-filter: blur(8px); transition: background 260ms var(--ease-out), border-color 260ms var(--ease-out); }
+.schedule-card:hover { background: rgba(246, 240, 229, .14); border-color: rgba(183, 154, 98, .54); }
+.schedule-time { font: 300 clamp(48px, 6vw, 68px)/.8 "Cormorant Garamond", serif; color: var(--gold); margin-bottom: 18px; }
+.schedule-event { }
+.event-title { margin: 0 0 8px; font: 500 clamp(18px, 2.2vw, 26px)/1.3 "Jost", sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.event-subtitle { margin: 0; font-size: clamp(14px, 1.3vw, 18px); letter-spacing: .06em; color: rgba(246, 240, 229, .72); }
 
 .venue-section { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(390px, .85fr); min-height: 720px; padding: 108px 6vw 110px; gap: 8vw; align-items: center; }
 .venue-art { position: relative; }
@@ -178,7 +174,7 @@
 .venue-index { position: absolute; z-index: 2; left: -45px; bottom: 17px; writing-mode: vertical-rl; transform: rotate(180deg); font: 500 9px/1 "Jost", sans-serif; letter-spacing: .3em; color: var(--gold); }
 .venue-copy { max-width: 510px; }
 .venue-copy h2 { margin: 0 0 26px; font-size: clamp(31px, 3.6vw, 52px); line-height: 1.45; font-weight: 400; letter-spacing: .08em; color: var(--sage-dark); }
-.venue-en { margin: 0; font: italic 400 clamp(21px, 2vw, 28px)/1.35 "Cormorant Garamond", serif; color: var(--sage); }
+.venue-zh { margin: 0; font-size: clamp(13px, 1.1vw, 16px); letter-spacing: .08em; color: rgba(49, 55, 47, .68); }
 .address-rule { width: 54px; height: 1px; margin: 32px 0; background: var(--gold); }
 .address { margin: 0; font-size: 15px; line-height: 1.9; letter-spacing: .08em; }
 .address span { font: 400 14px/1.6 "Jost", sans-serif; letter-spacing: .05em; color: rgba(49, 55, 47, .64); }
