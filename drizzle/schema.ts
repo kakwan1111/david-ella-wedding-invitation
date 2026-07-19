@@ -43,3 +43,23 @@ export const weddingFiles = mysqlTable("wedding_files", {
 
 export type WeddingFile = typeof weddingFiles.$inferSelect;
 export type InsertWeddingFile = typeof weddingFiles.$inferInsert;
+
+/**
+ * 婚禮 RSVP 回覆表
+ */
+export const rsvpResponses = mysqlTable("rsvp_responses", {
+  id: int("id").autoincrement().primaryKey(),
+  guestName: varchar("guestName", { length: 255 }).notNull(),
+  guestEmail: varchar("guestEmail", { length: 320 }),
+  guestPhone: varchar("guestPhone", { length: 20 }),
+  numberOfAdults: int("numberOfAdults").default(1).notNull(),
+  numberOfChildren: int("numberOfChildren").default(0).notNull(),
+  dietaryRestrictions: text("dietaryRestrictions"),
+  specialNotes: text("specialNotes"),
+  rsvpStatus: mysqlEnum("rsvpStatus", ["attending", "not_attending", "pending"]).default("pending").notNull(),
+  submittedAt: timestamp("submittedAt").defaultNow().notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type RsvpResponse = typeof rsvpResponses.$inferSelect;
+export type InsertRsvpResponse = typeof rsvpResponses.$inferInsert;

@@ -192,6 +192,74 @@ export default function Home() {
         </motion.div>
       </section>
 
+      <section className="rsvp-section paper-section">
+        <motion.div className="rsvp-container" {...motionProps}>
+          <SectionHeading eyebrow="Please Respond">RSVP</SectionHeading>
+          <form className="rsvp-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div className="form-group">
+              <label htmlFor="guestName">Your Name *</label>
+              <input type="text" id="guestName" name="guestName" required placeholder="Full Name" />
+            </div>
+
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="guestEmail">Email</label>
+                <input type="email" id="guestEmail" name="guestEmail" placeholder="your@email.com" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="guestPhone">Phone</label>
+                <input type="tel" id="guestPhone" name="guestPhone" placeholder="+852 XXXX XXXX" />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="numberOfAdults">Number of Adults *</label>
+                <select id="numberOfAdults" name="numberOfAdults" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5+</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="numberOfChildren">Number of Children</label>
+                <select id="numberOfChildren" name="numberOfChildren">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="rsvpStatus">Will you be attending? *</label>
+              <select id="rsvpStatus" name="rsvpStatus" required>
+                <option value="">Please select</option>
+                <option value="attending">Yes, I will attend</option>
+                <option value="not_attending">No, I cannot attend</option>
+                <option value="pending">I will let you know</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="dietaryRestrictions">Dietary Restrictions</label>
+              <input type="text" id="dietaryRestrictions" name="dietaryRestrictions" placeholder="e.g., Vegetarian, Gluten-free" />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="specialNotes">Special Notes</label>
+              <textarea id="specialNotes" name="specialNotes" placeholder="Any special requests or messages for us..." rows={4} />
+            </div>
+
+            <button type="submit" className="rsvp-submit">Submit RSVP</button>
+          </form>
+        </motion.div>
+      </section>
+
       <footer className="invitation-footer">
         <img className="footer-botanical" src={ASSETS.divider} alt="" aria-hidden="true" />
         <img src={ASSETS.monogram} alt="" aria-hidden="true" />
