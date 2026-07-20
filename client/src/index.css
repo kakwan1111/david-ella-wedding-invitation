@@ -269,7 +269,15 @@
   background: rgba(255, 255, 255, .8);
   font: 400 14px/1.5 "Noto Serif TC", serif;
   color: var(--sage-dark);
-  transition: border-color 180ms var(--ease-out), background 180ms var(--ease-out);
+  transition: border-color 180ms var(--ease-out), background 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 160ms var(--ease-out);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: rgba(183, 154, 98, .75);
+  box-shadow: 0 2px 8px rgba(183, 154, 98, .12);
+  transform: translateY(-1px);
 }
 
 .form-group input:focus,
@@ -278,6 +286,8 @@
   outline: none;
   border-color: var(--gold);
   background: rgba(255, 255, 255, .95);
+  box-shadow: 0 4px 12px rgba(183, 154, 98, .18);
+  transform: translateY(-2px);
 }
 
 .form-group textarea {

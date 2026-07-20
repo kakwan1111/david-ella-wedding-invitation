@@ -195,7 +195,7 @@ export default function Home() {
       <section className="rsvp-section paper-section">
         <motion.div className="rsvp-container" {...motionProps}>
           <SectionHeading eyebrow="Please Respond">RSVP</SectionHeading>
-          <form className="rsvp-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form className="rsvp-form" action="https://formspree.io/f/maqrjqyj" method="POST">
             <div className="form-group">
               <label htmlFor="guestName">Your Name *</label>
               <input type="text" id="guestName" name="guestName" required placeholder="Full Name" />
