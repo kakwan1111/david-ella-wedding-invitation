@@ -241,7 +241,7 @@ export default function Home() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="specialRequests">Dietary Restrictions & Special Notes</label>
+              <label htmlFor="specialRequests">Special Notes & Dietary Restrictions</label>
               <textarea id="specialRequests" name="specialRequests" placeholder="e.g., Vegetarian, Gluten-free, or any special requests for us..." rows={4} />
             </div>
 
