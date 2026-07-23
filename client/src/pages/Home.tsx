@@ -201,15 +201,9 @@ export default function Home() {
               <input type="text" id="guestName" name="guestName" required placeholder="Full Name" />
             </div>
 
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="guestEmail">Email</label>
-                <input type="email" id="guestEmail" name="guestEmail" placeholder="your@email.com" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="guestPhone">Phone</label>
-                <input type="tel" id="guestPhone" name="guestPhone" placeholder="+852 XXXX XXXX" />
-              </div>
+            <div className="form-group">
+              <label htmlFor="guestPhone">Phone</label>
+              <input type="tel" id="guestPhone" name="guestPhone" placeholder="+852 XXXX XXXX" />
             </div>
 
             <div className="form-row">
@@ -220,7 +214,8 @@ export default function Home() {
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option value="5">5+</option>
+                  <option value="5">5</option>
+                  <option value="6">6+</option>
                 </select>
               </div>
               <div className="form-group">
@@ -246,13 +241,8 @@ export default function Home() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="dietaryRestrictions">Dietary Restrictions</label>
-              <input type="text" id="dietaryRestrictions" name="dietaryRestrictions" placeholder="e.g., Vegetarian, Gluten-free" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="specialNotes">Special Notes</label>
-              <textarea id="specialNotes" name="specialNotes" placeholder="Any special requests or messages for us..." rows={4} />
+              <label htmlFor="specialRequests">Dietary Restrictions & Special Notes</label>
+              <textarea id="specialRequests" name="specialRequests" placeholder="e.g., Vegetarian, Gluten-free, or any special requests for us..." rows={4} />
             </div>
 
             <button type="submit" className="rsvp-submit">Submit RSVP</button>
