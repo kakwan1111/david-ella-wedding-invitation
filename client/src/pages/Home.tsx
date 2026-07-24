@@ -105,9 +105,9 @@ export default function Home() {
           <div className="hero-arch">
             <span className="arch-flourish">D · E</span>
             <h1>
-              <span>Ella Au</span>
+              <span className="pinyon-script">Ella Au</span>
               <em>&amp;</em>
-              <span>David Wong</span>
+              <span className="pinyon-script">David Wong</span>
             </h1>
           </div>
           <div className="invitation-copy">

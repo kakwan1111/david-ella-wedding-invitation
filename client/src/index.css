@@ -332,3 +332,11 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Pinyon Script 字體樣式 */
+.pinyon-script {
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 400;
+  letter-spacing: .02em;
+}
