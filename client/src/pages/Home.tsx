@@ -152,14 +152,14 @@ export default function Home() {
         </motion.div>
         <div className="schedule-grid">
           <motion.article className="schedule-card" {...motionProps}>
-            <div className="schedule-time">11:00 AM</div>
+            <div className="schedule-time">11:30 AM</div>
             <div className="schedule-event">
               <p className="event-title">Reception</p>
               <p className="event-subtitle">恭候</p>
             </div>
           </motion.article>
           <motion.article className="schedule-card" {...motionProps}>
-            <div className="schedule-time">11:30 AM</div>
+            <div className="schedule-time">12:00 PM</div>
             <div className="schedule-event">
               <p className="event-title">Ceremony &amp; Luncheon</p>
               <p className="event-subtitle">儀式及午宴</p>

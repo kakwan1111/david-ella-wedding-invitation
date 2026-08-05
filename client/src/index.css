@@ -336,7 +336,29 @@
 /* Pinyon Script 字體樣式 */
 .pinyon-script {
   font-family: "Pinyon Script", cursive;
-  font-size: clamp(56px, 9vw, 120px);
+  font-size: clamp(64px, 10.5vw, 140px);
   font-weight: 400;
   letter-spacing: .02em;
+  color: var(--sage-dark);
+  opacity: 0;
+  animation: fadeInFloat 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.pinyon-script:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.pinyon-script:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
