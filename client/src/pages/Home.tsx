@@ -151,14 +151,14 @@ export default function Home() {
           <SectionHeading eyebrow="The celebration">Schedule</SectionHeading>
         </motion.div>
         <div className="schedule-grid">
-          <motion.article className="schedule-card" {...motionProps}>
+          <motion.article className="schedule-card" {...motionProps} tabIndex={0} aria-label="11:30 AM Reception">
             <div className="schedule-time">11:30 AM</div>
             <div className="schedule-event">
               <p className="event-title">Reception</p>
               <p className="event-subtitle">恭候</p>
             </div>
           </motion.article>
-          <motion.article className="schedule-card" {...motionProps}>
+          <motion.article className="schedule-card" {...motionProps} tabIndex={0} aria-label="12:00 PM Ceremony and Luncheon">
             <div className="schedule-time">12:00 PM</div>
             <div className="schedule-event">
               <p className="event-title">Ceremony &amp; Luncheon</p>
